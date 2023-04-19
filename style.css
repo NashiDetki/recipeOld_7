@@ -1,0 +1,262 @@
+.page{
+    margin: 0;
+}
+
+
+
+
+
+
+@font-face{
+    font-family: Pacifico;
+    src: url(./fonts/Pacifico-Regular.ttf);
+}
+
+
+
+
+
+
+@font-face{
+    font-family: BadScript;
+    src: url(./fonts/BadScript-Regular.ttf);
+}
+
+
+
+
+
+
+@font-face{
+    font-family: Ubuntu;
+    src: url(./fonts/Ubuntu-Light.woff2);
+    font-weight: 100;
+}
+
+
+
+
+
+
+.main{
+    max-width: 960px;
+    min-width: 320px;
+    background-color: rgb(255, 189, 211);
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+.title{
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 56px;
+    line-height: 100px;
+    color: #000000;
+    text-decoration: underline;
+    font-family: Pacifico;
+}
+
+
+
+
+
+
+@media screen and ( max-width: 700px){
+    .title{
+        font-size: 26px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+.cards{
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    height: 500px;
+    border-radius: 10px;
+    background-size: cover;
+    box-shadow: 18px 18px 18px #522e18;
+    transition: transform 0.2s linear 0.1s;
+}
+
+
+
+
+
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+.card_title{
+    color: #070505;
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    font-size: 25px;
+    font-family: BadScript;
+}
+
+
+
+
+.description{
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    width: 80%;
+    font-weight: 100;
+    text-align: center;
+    color: #000000;
+    font-family: Ubuntu; ;
+}
+
+
+
+
+.card_item_1{
+    background-image: url(./image/photo_2023-02-10_11-45-19.jpg);
+    background-position: -372px;
+}
+
+
+
+
+.card_item_2{
+    background-image: url(./image/photo_2023-02-10_11-45-27.jpg);
+    background-position: -137px;
+}
+
+
+
+
+.card_item_3{
+    background-image: url(./image/photo_2023-02-10_11-45-23.jpg);
+    background-position: -359px;
+}
+
+
+
+
+color-dark{
+    color: #000;
+}
+
+
+
+
+.font-weigth-bold{
+    font-weight:600 ;
+}
+
+
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+
+.popup_conteiner{
+    display: flex;
+    width:520px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    flex-direction: column;
+    padding: 20px;
+}
+
+@media screen  and (max-width:865px){
+   .popup_conteiner {
+    width: 270px;
+    height: 450px;
+   } 
+}
+
+.popup_button-exit{
+    position: absolute;
+    top: -37px;
+    right: -37px;
+    background-image: url(./image/CloseButoon.svg);
+    width: 32px;
+    height: 32px;
+}
+
+@media screen and (max-width: 400px){
+    .popup_button-exit{
+        right:0px;
+    }
+}
+
+.popup_title{
+    text-align: center;
+    font-family: BadScript;
+    color: #000;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+.popup_text{
+    font-family: Ubuntu;
+    font-weight: 100;
+    text-align: center;
+    color: #000;
+
+}
+
+
+.popup_opened{
+    visibility: visible;
+    opacity: 1;
+
+}
